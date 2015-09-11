@@ -1,0 +1,17 @@
+﻿<metro:Flyout x:Class="PrismMahAppsSample.Shell.Views.SettingsFlyout"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:local="clr-namespace:PrismMahAppsSample.Shell.Views"
+              xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+              mc:Ignorable="d" 
+              Theme="Accent"
+              Position="Right"
+              Header="Settings"
+              Width="250"
+              d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+            
+    </Grid>
+</metro:Flyout>
