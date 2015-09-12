@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="PrismMahAppsSample.ModuleB.Views.HomeTiles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismMahAppsSample.ModuleB.Views"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Label Grid.Row="0" 
+               Style="{StaticResource Header1}"
+               Content="Module B - Tiles" />
+
+        <!-- Tiles -->
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal">
+            <metro:Tile Title="Module B - Tile 1" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TiltFactor="1"                    
+                    Width="100" 
+                    Height="100" />
+            <metro:Tile Title="Module B - Tile 2" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TiltFactor="1"                    
+                    Width="100" 
+                    Height="100" />
+            <metro:Tile Title="Module B - Tile 3" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TiltFactor="1"                    
+                    Width="100" 
+                    Height="100" />
+            <metro:Tile Title="Module B - Tile 4" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TiltFactor="1"                    
+                    Width="100" 
+                    Height="100" />
+            <metro:Tile Title="Module B - Tile 5" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TiltFactor="1"                    
+                    Width="100" 
+                    Height="100" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

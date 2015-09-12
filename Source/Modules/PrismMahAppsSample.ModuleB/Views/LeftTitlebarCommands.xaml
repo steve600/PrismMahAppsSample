@@ -1,0 +1,26 @@
+﻿<StackPanel x:Class="PrismMahAppsSample.ModuleB.Views.LeftTitlebarCommands"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:PrismMahAppsSample.ModuleB.Views"
+            xmlns:constants="clr-namespace:PrismMahAppsSample.Infrastructure.Constants;assembly=PrismMahAppsSample.Infrastructure"
+            Orientation="Horizontal"
+            mc:Ignorable="d" 
+            d:DesignHeight="30" d:DesignWidth="300">
+    <Button Command="{Binding ToggleFlyoutCommand}"
+            CommandParameter="{x:Static constants:FlyoutNames.ModuleBC1Flyout}">
+        <StackPanel Orientation="Horizontal">
+            <Rectangle Width="20" Height="20"
+                       Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Fill"
+                                 Visual="{StaticResource appbar_settings}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+            <TextBlock Margin="4 0 0 0"
+                       VerticalAlignment="Center"
+                       Text="Module B C1" />
+        </StackPanel>
+    </Button>
+</StackPanel>

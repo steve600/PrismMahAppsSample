@@ -5,12 +5,18 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Custom-Styles -->
+                <ResourceDictionary Source="/PrismMahAppsSample.Styling;component/LookAndFeel.xaml"/>
+                
+                <!-- MahApps-Styles -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
 
+                <!-- ModernUI-Icons -->
                 <ResourceDictionary Source="/Resources/Icons.xaml" />
 
             </ResourceDictionary.MergedDictionaries>

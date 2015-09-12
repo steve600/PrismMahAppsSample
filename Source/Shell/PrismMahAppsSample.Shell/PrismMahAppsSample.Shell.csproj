@@ -174,6 +174,18 @@
       <Project>{de912131-546f-40a9-9c3f-7016957ea613}</Project>
       <Name>PrismMahAppsSample.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\PrismMahAppsSample.Styling\PrismMahAppsSample.Styling.csproj">
+      <Project>{a9984f2e-d289-45f0-aff4-693d77f3cde4}</Project>
+      <Name>PrismMahAppsSample.Styling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modules\PrismMahAppsSample.ModuleA\PrismMahAppsSample.ModuleA.csproj">
+      <Project>{97c8f8f9-d101-4c2c-8151-90782a360162}</Project>
+      <Name>PrismMahAppsSample.ModuleA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modules\PrismMahAppsSample.ModuleB\PrismMahAppsSample.ModuleB.csproj">
+      <Project>{b74fbf16-ec1e-49ce-8f68-99eb7265d124}</Project>
+      <Name>PrismMahAppsSample.ModuleB</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\WindowsIcons-license.txt" />

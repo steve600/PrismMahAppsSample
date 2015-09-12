@@ -6,6 +6,7 @@ using MahApps.Metro.Controls;
 using PrismMahAppsSample.Shell.RegionAdapter;
 using Microsoft.Practices.Unity;
 using PrismMahAppsSample.Infrastructure.Constants;
+using Prism.Modularity;
 
 namespace PrismMahAppsSample.Shell
 {
@@ -49,6 +50,13 @@ namespace PrismMahAppsSample.Shell
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
+
+            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+
+            // Register ModuleA
+            moduleCatalog.AddModule(typeof(PrismMahAppsSample.ModuleA.ModuleA));
+            // Register ModuleB
+            moduleCatalog.AddModule(typeof(PrismMahAppsSample.ModuleB.ModuleB));
         }
 
         /// <summary>

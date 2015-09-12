@@ -10,15 +10,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         GlowBrush="{DynamicResource AccentColorBrush}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-
-    <metro:MetroWindow.Resources>
-        <Style x:Key="Header1" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
-            <Setter Property="FontSize" Value="28" />
-            <Setter Property="FontWeight" Value="SemiBold" />
-            <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
-        </Style>
-    </metro:MetroWindow.Resources>
+        Title="MainWindow" Height="600" Width="800">
 
     <!-- Left-Windows Commands -->
     <metro:MetroWindow.LeftWindowCommands>

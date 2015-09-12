@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahAppsSample.Infrastr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahAppsSample.Shell", "Source\Shell\PrismMahAppsSample.Shell\PrismMahAppsSample.Shell.csproj", "{85836386-FC9B-40EC-832E-541E6C9A445A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{92FB204F-6F3B-4958-A866-3ED95737BB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahAppsSample.ModuleB", "Source\Modules\PrismMahAppsSample.ModuleB\PrismMahAppsSample.ModuleB.csproj", "{B74FBF16-EC1E-49CE-8F68-99EB7265D124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahAppsSample.ModuleA", "Source\Modules\PrismMahAppsSample.ModuleA\PrismMahAppsSample.ModuleA.csproj", "{97C8F8F9-D101-4C2C-8151-90782A360162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahAppsSample.Styling", "Source\Infrastructure\PrismMahAppsSample.Styling\PrismMahAppsSample.Styling.csproj", "{A9984F2E-D289-45F0-AFF4-693D77F3CDE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +33,18 @@ Global
 		{85836386-FC9B-40EC-832E-541E6C9A445A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85836386-FC9B-40EC-832E-541E6C9A445A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85836386-FC9B-40EC-832E-541E6C9A445A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74FBF16-EC1E-49CE-8F68-99EB7265D124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74FBF16-EC1E-49CE-8F68-99EB7265D124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74FBF16-EC1E-49CE-8F68-99EB7265D124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74FBF16-EC1E-49CE-8F68-99EB7265D124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C8F8F9-D101-4C2C-8151-90782A360162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C8F8F9-D101-4C2C-8151-90782A360162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C8F8F9-D101-4C2C-8151-90782A360162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C8F8F9-D101-4C2C-8151-90782A360162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9984F2E-D289-45F0-AFF4-693D77F3CDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9984F2E-D289-45F0-AFF4-693D77F3CDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9984F2E-D289-45F0-AFF4-693D77F3CDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9984F2E-D289-45F0-AFF4-693D77F3CDE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +52,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DE912131-546F-40A9-9C3F-7016957EA613} = {22F9F332-BF7A-4747-A1CD-6C7727178D51}
 		{85836386-FC9B-40EC-832E-541E6C9A445A} = {941CB691-6644-4C1E-8644-636B75DD66C8}
+		{B74FBF16-EC1E-49CE-8F68-99EB7265D124} = {92FB204F-6F3B-4958-A866-3ED95737BB80}
+		{97C8F8F9-D101-4C2C-8151-90782A360162} = {92FB204F-6F3B-4958-A866-3ED95737BB80}
+		{A9984F2E-D289-45F0-AFF4-693D77F3CDE4} = {22F9F332-BF7A-4747-A1CD-6C7727178D51}
 	EndGlobalSection
 EndGlobal
