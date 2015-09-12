@@ -170,6 +170,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\PrismMahAppsSample.Infrastructure\PrismMahAppsSample.Infrastructure.csproj">
+      <Project>{de912131-546f-40a9-9c3f-7016957ea613}</Project>
+      <Name>PrismMahAppsSample.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\PrismMahAppsSample.Styling\PrismMahAppsSample.Styling.csproj">
       <Project>{a9984f2e-d289-45f0-aff4-693d77f3cde4}</Project>
       <Name>PrismMahAppsSample.Styling</Name>
