@@ -2,11 +2,7 @@
 using Prism.Regions;
 using PrismMahAppsSample.Infrastructure.Base;
 using PrismMahAppsSample.Infrastructure.Constants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PrismMahAppsSample.ModuleB.Views;
 
 namespace PrismMahAppsSample.ModuleB
 {
@@ -21,13 +17,13 @@ namespace PrismMahAppsSample.ModuleB
             base(unityContainer, regionManager)
         {
             // Titlebar
-            regionManager.AddToRegion(RegionNames.LeftWindowCommandsRegions, new Views.LeftTitlebarCommands());
+            regionManager.RegisterViewWithRegion(RegionNames.LeftWindowCommandsRegions, typeof(LeftTitlebarCommands));
 
             // Flyouts
-            regionManager.AddToRegion(RegionNames.FlyoutRegion, new Views.C1Flyout());
+            regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(C1Flyout));
 
             // Tiles
-            regionManager.AddToRegion(RegionNames.MainRegion, new Views.HomeTiles());
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
         }
     }
 }

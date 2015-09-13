@@ -5,10 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismMahAppsSample.ModuleA.Views"
              xmlns:constants="clr-namespace:PrismMahAppsSample.Infrastructure.Constants;assembly=PrismMahAppsSample.Infrastructure"
+             xmlns:inf="clr-namespace:PrismMahAppsSample.Infrastructure;assembly=PrismMahAppsSample.Infrastructure"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              Orientation="Horizontal"
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="300">
-    <Button Command="{Binding ToggleFlyoutCommand}"
+    <Button Command="{x:Static inf:ApplicationCommands.ShowFlyoutCommand}"
             CommandParameter="{x:Static constants:FlyoutNames.ModuleAC1Flyout}">
         <StackPanel Orientation="Horizontal">
             <Rectangle Width="20" Height="20"
@@ -23,7 +26,7 @@
                        Text="Module A C1" />
         </StackPanel>
     </Button>
-    <Button Command="{Binding ToggleFlyoutCommand}"
+    <Button Command="{x:Static inf:ApplicationCommands.ShowFlyoutCommand}"
             CommandParameter="{x:Static constants:FlyoutNames.ModuleAC2Flyout}">
         <StackPanel Orientation="Horizontal">
             <Rectangle Width="20" Height="20"

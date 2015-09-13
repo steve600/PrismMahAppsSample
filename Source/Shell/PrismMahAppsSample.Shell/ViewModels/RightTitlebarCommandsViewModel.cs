@@ -1,4 +1,5 @@
-﻿using PrismMahAppsSample.Infrastructure.Base;
+﻿using Prism.Regions;
+using PrismMahAppsSample.Infrastructure.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace PrismMahAppsSample.Shell.ViewModels
 {
     public class RightTitlebarCommandsViewModel : ViewModelBase
     {
+
     }
 }

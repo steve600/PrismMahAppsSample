@@ -55,14 +55,17 @@
       <HintPath>..\..\..\packages\Unity.3.5.1405-prerelease\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism">
-      <HintPath>..\..\..\Libs\Prism.dll</HintPath>
+    <Reference Include="Prism, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Core.6.0.1\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Unity.Wpf">
-      <HintPath>..\..\..\Libs\Prism.Unity.Wpf.dll</HintPath>
+    <Reference Include="Prism.Unity.Wpf, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Unity.6.0.1\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Wpf">
-      <HintPath>..\..\..\Libs\Prism.Wpf.dll</HintPath>
+    <Reference Include="Prism.Wpf, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Wpf.6.0.1\lib\net45\Prism.Wpf.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,8 +123,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="RegionAdapter\FlyoutRegionAdapter.cs" />
-    <Compile Include="RegionAdapter\TitleBarWindowCommandsRegionAdapter.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

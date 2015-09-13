@@ -1,4 +1,4 @@
-﻿<metro:MetroWindow x:Class="PrismMahAppsSample.Views.MainWindow"
+﻿<metro:MetroWindow x:Class="PrismMahAppsSample.Shell.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,12 +14,12 @@
 
     <!-- Left-Windows Commands -->
     <metro:MetroWindow.LeftWindowCommands>
-        <metro:WindowCommands x:Name="leftWindowsCommandRegion" />
+        <metro:WindowCommands x:Name="leftWindowsCommandRegion" prism:RegionManager.RegionName="LeftWindowCommandsRegions" />
     </metro:MetroWindow.LeftWindowCommands>
 
     <!-- Right-Windows Commands -->
     <metro:MetroWindow.RightWindowCommands>
-        <metro:WindowCommands x:Name="rightWindowsCommandRegion" />
+        <metro:WindowCommands x:Name="rightWindowsCommandRegion" prism:RegionManager.RegionName="RightWindowCommandsRegions" />
     </metro:MetroWindow.RightWindowCommands>
 
     <!-- Flyouts -->
