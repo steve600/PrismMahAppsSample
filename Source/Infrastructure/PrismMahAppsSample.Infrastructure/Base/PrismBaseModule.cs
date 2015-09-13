@@ -1,23 +1,11 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrismMahAppsSample.Infrastructure.Base
 {
     public abstract class PrismBaseModule : IModule
     {
-        #region Members and Constants
-
-        private IUnityContainer unityContainer;
-        private IRegionManager regionManager;
-
-        #endregion
-
         #region Ctor
 
         /// <summary>
@@ -28,8 +16,8 @@ namespace PrismMahAppsSample.Infrastructure.Base
         /// <param name="regionViewRegistry">The region view registry.</param>
         public PrismBaseModule(IUnityContainer unityContainer, IRegionManager regionManager)
         {
-            this.UnityContainer = unityContainer;
-            this.regionManager = regionManager;
+            UnityContainer = unityContainer;
+            RegionManager = regionManager;
         }
 
         #endregion Ctor
@@ -51,20 +39,12 @@ namespace PrismMahAppsSample.Infrastructure.Base
         /// <summary>
         /// The Unity container
         /// </summary>
-        public IUnityContainer UnityContainer
-        {
-            get { return this.unityContainer; }
-            private set { this.unityContainer = value; }
-        }
+        public IUnityContainer UnityContainer { get; private set; }
 
         /// <summary>
         /// The region manager
         /// </summary>
-        public IRegionManager RegionManager
-        {
-            get { return this.regionManager; }
-            private set { this.regionManager = value; }
-        }
+        public IRegionManager RegionManager { get; private set; }
 
         #endregion Properties
     }

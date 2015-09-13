@@ -1,12 +1,12 @@
 ﻿using Prism.Unity;
-using PrismMahAppsSample.Views;
 using System.Windows;
 using Prism.Regions;
-using MahApps.Metro.Controls;
-using PrismMahAppsSample.Shell.RegionAdapter;
 using Microsoft.Practices.Unity;
 using PrismMahAppsSample.Infrastructure.Constants;
 using Prism.Modularity;
+using PrismMahAppsSample.Shell.Views;
+using PrismMahAppsSample.Infrastructure.Services;
+using PrismMahAppsSample.Infrastructure;
 
 namespace PrismMahAppsSample.Shell
 {
@@ -18,7 +18,7 @@ namespace PrismMahAppsSample.Shell
         /// <returns></returns>
         protected override DependencyObject CreateShell()
         {
-            return new MainWindow();
+            return Container.Resolve<MainWindow>();
         }
 
         /// <summary>
@@ -33,15 +33,22 @@ namespace PrismMahAppsSample.Shell
             if (regionManager != null)
             {
                 // Add right windows commands
-                regionManager.AddToRegion(RegionNames.RightWindowCommandsRegions, new Views.RightTitlebarCommands());
+                regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegions, typeof(RightTitlebarCommands));
                 // Add flyouts
-                regionManager.AddToRegion(RegionNames.FlyoutRegion, new Views.SettingsFlyout());
+                regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(SettingsFlyout));
                 // Add tiles to MainRegion
-                regionManager.AddToRegion(RegionNames.MainRegion, new Views.HomeTiles());
+                regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
             }
 
-            Application.Current.MainWindow = (Window)this.Shell;
             Application.Current.MainWindow.Show();
+        }
+
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
+
+            Container.RegisterType<IApplicationCommands, ApplicationCommandsProxy>();
+            Container.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
         }
 
         /// <summary>
@@ -49,34 +56,11 @@ namespace PrismMahAppsSample.Shell
         /// </summary>
         protected override void ConfigureModuleCatalog()
         {
-            base.ConfigureModuleCatalog();
-
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
-
             // Register ModuleA
-            moduleCatalog.AddModule(typeof(PrismMahAppsSample.ModuleA.ModuleA));
+            moduleCatalog.AddModule(typeof(ModuleA.ModuleA));
             // Register ModuleB
-            moduleCatalog.AddModule(typeof(PrismMahAppsSample.ModuleB.ModuleB));
-        }
-
-        /// <summary>
-        /// Register region adapter mappings
-        /// </summary>
-        /// <returns></returns>
-        protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
-        {
-            RegionAdapterMappings mappings = base.ConfigureRegionAdapterMappings();
-
-            // Register RegionAdapters
-            mappings.RegisterMapping(typeof(FlyoutsControl), Container.Resolve<FlyoutRegionAdapter>());
-            mappings.RegisterMapping(typeof(WindowCommands), Container.Resolve<TitleBarWindowCommandsRegionAdapter>());
-
-            return mappings;
-        }
-
-        protected override void ConfigureViewModelLocator()
-        {
-            base.ConfigureViewModelLocator();
+            moduleCatalog.AddModule(typeof(ModuleB.ModuleB));
         }
     }
 }

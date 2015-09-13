@@ -1,51 +1,34 @@
 ﻿using MahApps.Metro.Controls;
-using Microsoft.Practices.ServiceLocation;
-using Prism.Mvvm;
 using Prism.Regions;
 using PrismMahAppsSample.Infrastructure.Constants;
-using PrismMahAppsSample.Shell.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace PrismMahAppsSample.Views
+namespace PrismMahAppsSample.Shell.Views
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public MainWindow()
+        public MainWindow(IRegionManager regionManager)
         {
             InitializeComponent();
 
-            // TODO: Uses ViewModelLocator (PRISM-LIB)
-            this.DataContext = new MainWindowViewModel();
-
-            // TODO: Workaround -> the XAML-Declaration doesn't work for this region types (declaration outside of the metro window)???
-            IRegionManager regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
+            // The RegionManager.RegionName attached property XAML-Declaration doesn't work for this scenario (object declarated outside the logical tree)
+            // theses objects are not part of the logical tree, hence the parent that has the region manager to use (the Window) cannot be found using LogicalTreeHelper.FindParent 
+            // therefore the regionManager is never found and cannot be assigned automatically by Prism.  This means we have to handle this ourselves
             if (regionManager != null)
             {
-                RegionManager.SetRegionName(this.leftWindowsCommandRegion, RegionNames.LeftWindowCommandsRegions);
-                RegionManager.SetRegionManager(this.leftWindowsCommandRegion, regionManager);
-
-                RegionManager.SetRegionName(this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
-                RegionManager.SetRegionManager(this.rightWindowsCommandRegion, regionManager);
-
-                RegionManager.SetRegionName(this.flyoutsControlRegion, RegionNames.FlyoutRegion);
-                RegionManager.SetRegionManager(this.flyoutsControlRegion, regionManager);
+                SetRegionManager(regionManager, this.leftWindowsCommandRegion, RegionNames.LeftWindowCommandsRegions);
+                SetRegionManager(regionManager, this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
+                SetRegionManager(regionManager, this.flyoutsControlRegion, RegionNames.FlyoutRegion);
             }
+        }
+
+        void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)
+        {
+            RegionManager.SetRegionName(regionTarget, regionName);
+            RegionManager.SetRegionManager(regionTarget, regionManager);
         }
     }
 }
