@@ -106,9 +106,6 @@
     <Compile Include="Views\ShellSettingsFlyout.xaml.cs">
       <DependentUpon>ShellSettingsFlyout.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ShellTopBarCommands.xaml.cs">
-      <DependentUpon>ShellTopBarCommands.xaml</DependentUpon>
-    </Compile>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -135,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellSettingsFlyout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ShellTopBarCommands.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

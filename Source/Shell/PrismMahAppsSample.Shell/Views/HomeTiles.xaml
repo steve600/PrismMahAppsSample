@@ -8,13 +8,14 @@
              xmlns:local="clr-namespace:PrismMahAppsSample.Shell.Views"
              xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:constants="clr-namespace:PrismMahAppsSample.Infrastructure.Constants;assembly=PrismMahAppsSample.Infrastructure" 
+             xmlns:inf="clr-namespace:PrismMahAppsSample.Infrastructure;assembly=PrismMahAppsSample.Infrastructure" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel Orientation="Horizontal">
         <metro:Tile Title="Settings" 
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Command="{Binding ToggleFlyoutCommand}"
+                    Command="{x:Static inf:ApplicationCommands.ShowFlyoutCommand}"
                     CommandParameter="{x:Static constants:FlyoutNames.ShellSettingsFlyout}"
                     TiltFactor="1"                    
                     Width="100" 
