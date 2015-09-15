@@ -8,7 +8,7 @@ MahApps.Metro is a toolkit for creating Metro / Modern UI styled WPF apps. The t
 
 The example application shows the combination of these two libraries with PRISM-Regions, Modules, Commands, Flyouts, Tiles and so on. Here's a screenshot of the main dialog:
 
-![Main dialog](http://csharp-blog.de/wp-content/uploads/2015/09/PrismMahAppsSample_13.png)
+![Main dialog](http://csharp-blog.de/wp-content/uploads/2015/09/PrismMahAppsSample_MainDialog.png)
 
 ### Additional information (in german)
 
