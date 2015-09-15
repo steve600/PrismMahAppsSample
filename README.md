@@ -16,3 +16,6 @@ The example application shows the combination of these two libraries with PRISM-
 
 [MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 2: Regions und RegionAdapter)] (http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-2-regions-und-regionadapter/)
 
+[MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 3: Erstellung von Modulen)]
+(http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-3-erstellung-von-modulen/)
+
