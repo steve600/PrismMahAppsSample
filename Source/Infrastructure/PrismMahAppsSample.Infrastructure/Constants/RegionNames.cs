@@ -10,7 +10,7 @@ namespace PrismMahAppsSample.Infrastructure.Constants
     {
         public static string MainRegion = "MainRegion";
         public static string FlyoutRegion = "FlyoutRegion";
-        public static string LeftWindowCommandsRegions = "LeftWindowCommandsRegions";
-        public static string RightWindowCommandsRegions = "RightWindowCommandsRegions";
+        public static string LeftWindowCommandsRegion = "LeftWindowCommandsRegion";
+        public static string RightWindowCommandsRegion = "RightWindowCommandsRegion";
     }
 }

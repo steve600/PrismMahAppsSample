@@ -77,12 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationCommands.cs" />
-    <Compile Include="Base\FlyoutViewModel.cs" />
     <Compile Include="Base\PrismBaseModule.cs" />
     <Compile Include="Base\ViewModelBase.cs" />
     <Compile Include="Constants\FlyoutNames.cs" />
     <Compile Include="Constants\RegionNames.cs" />
-    <Compile Include="Services\IFlyoutService.cs" />
+    <Compile Include="Events\StatusBarMessageUpdateEvent.cs" />
+    <Compile Include="Interfaces\IFlyoutService.cs" />
     <Compile Include="Interfaces\IFlyoutView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FlyoutService.cs" />

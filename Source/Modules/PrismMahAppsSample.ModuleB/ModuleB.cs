@@ -17,7 +17,7 @@ namespace PrismMahAppsSample.ModuleB
             base(unityContainer, regionManager)
         {
             // Titlebar
-            regionManager.RegisterViewWithRegion(RegionNames.LeftWindowCommandsRegions, typeof(LeftTitlebarCommands));
+            regionManager.RegisterViewWithRegion(RegionNames.LeftWindowCommandsRegion, typeof(LeftTitlebarCommands));
 
             // Flyouts
             regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(C1Flyout));

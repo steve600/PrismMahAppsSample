@@ -5,11 +5,11 @@ using PrismMahAppsSample.Infrastructure.Interfaces;
 namespace PrismMahAppsSample.Shell.Views
 {
     /// <summary>
-    /// Interaktionslogik für SettingsFlyout.xaml
+    /// Interaktionslogik für ShellSettingsFlyout.xaml
     /// </summary>
-    public partial class SettingsFlyout : Flyout, IFlyoutView
+    public partial class ShellSettingsFlyout : Flyout, IFlyoutView
     {
-        public SettingsFlyout()
+        public ShellSettingsFlyout()
         {
             InitializeComponent();
         }

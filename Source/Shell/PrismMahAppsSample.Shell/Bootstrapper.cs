@@ -7,6 +7,7 @@ using Prism.Modularity;
 using PrismMahAppsSample.Shell.Views;
 using PrismMahAppsSample.Infrastructure.Services;
 using PrismMahAppsSample.Infrastructure;
+using PrismMahAppsSample.Infrastructure.Interfaces;
 
 namespace PrismMahAppsSample.Shell
 {
@@ -22,20 +23,20 @@ namespace PrismMahAppsSample.Shell
         }
 
         /// <summary>
-        /// Intialize shell (MainWindow)
+        /// Initialize shell (MainWindow)
         /// </summary>
         protected override void InitializeShell()
         {
             base.InitializeShell();
 
-            // Register view
+            // Register views
             var regionManager = this.Container.Resolve<IRegionManager>();
             if (regionManager != null)
             {
                 // Add right windows commands
-                regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegions, typeof(RightTitlebarCommands));
+                regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegion, typeof(RightTitlebarCommands));
                 // Add flyouts
-                regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(SettingsFlyout));
+                regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(ShellSettingsFlyout));
                 // Add tiles to MainRegion
                 regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
             }

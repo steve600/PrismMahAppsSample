@@ -1,4 +1,4 @@
-﻿namespace PrismMahAppsSample.Infrastructure.Services
+﻿namespace PrismMahAppsSample.Infrastructure.Interfaces
 {
     public interface IFlyoutService
     {

@@ -91,17 +91,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AccentColor.cs" />
+    <Compile Include="Model\ApplicationTheme.cs" />
     <Compile Include="ViewModels\HomeTilesViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\RightTitlebarCommandsViewModel.cs" />
+    <Compile Include="ViewModels\ShellSettingsFlyoutViewModel.cs" />
     <Compile Include="Views\HomeTiles.xaml.cs">
       <DependentUpon>HomeTiles.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RightTitlebarCommands.xaml.cs">
       <DependentUpon>RightTitlebarCommands.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SettingsFlyout.xaml.cs">
-      <DependentUpon>SettingsFlyout.xaml</DependentUpon>
+    <Compile Include="Views\ShellSettingsFlyout.xaml.cs">
+      <DependentUpon>ShellSettingsFlyout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellTopBarCommands.xaml.cs">
       <DependentUpon>ShellTopBarCommands.xaml</DependentUpon>
@@ -131,7 +134,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SettingsFlyout.xaml">
+    <Page Include="Views\ShellSettingsFlyout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

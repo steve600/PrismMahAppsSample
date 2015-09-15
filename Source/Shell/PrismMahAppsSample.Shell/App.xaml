@@ -5,10 +5,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                
+
                 <!-- Custom-Styles -->
                 <ResourceDictionary Source="/PrismMahAppsSample.Styling;component/LookAndFeel.xaml"/>
-                
+
                 <!-- MahApps-Styles -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />

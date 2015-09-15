@@ -19,8 +19,8 @@ namespace PrismMahAppsSample.Shell.Views
             // therefore the regionManager is never found and cannot be assigned automatically by Prism.  This means we have to handle this ourselves
             if (regionManager != null)
             {
-                SetRegionManager(regionManager, this.leftWindowsCommandRegion, RegionNames.LeftWindowCommandsRegions);
-                SetRegionManager(regionManager, this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
+                SetRegionManager(regionManager, this.leftWindowCommandsRegion, RegionNames.LeftWindowCommandsRegion);
+                SetRegionManager(regionManager, this.rightWindowCommandsRegion, RegionNames.RightWindowCommandsRegion);
                 SetRegionManager(regionManager, this.flyoutsControlRegion, RegionNames.FlyoutRegion);
             }
         }
