@@ -5,9 +5,13 @@
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                    xmlns:local="clr-namespace:PrismMahAppsSample"
                    xmlns:infConstants="clr-namespace:PrismMahAppsSample.Infrastructure.Constants;assembly=PrismMahAppsSample.Infrastructure"
+                   xmlns:infBehaviors="clr-namespace:PrismMahAppsSample.Infrastructure.Behaviors;assembly=PrismMahAppsSample.Infrastructure"
+                   infBehaviors:RegionPopupBehaviors.CreatePopupRegionWithName="{x:Static infConstants:RegionNames.DialogPopupRegion}"
+                   infBehaviors:RegionPopupBehaviors.ContainerWindowStyle="{StaticResource PopupRegionWindowStyle}"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
                    xmlns:prism="http://www.codeplex.com/prism"
                    prism:ViewModelLocator.AutoWireViewModel="True"
+                   ResizeMode="CanResizeWithGrip"
                    GlowBrush="{DynamicResource AccentColorBrush}"
                    mc:Ignorable="d"
                    Title="MainWindow" Height="600" Width="800">

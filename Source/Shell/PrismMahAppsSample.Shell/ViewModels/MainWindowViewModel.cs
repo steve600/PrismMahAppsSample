@@ -2,7 +2,9 @@
 using Prism.Events;
 using Prism.Regions;
 using PrismMahAppsSample.Infrastructure.Base;
+using PrismMahAppsSample.Infrastructure.Constants;
 using PrismMahAppsSample.Infrastructure.Events;
+using PrismMahAppsSample.Infrastructure.Interfaces;
 
 namespace PrismMahAppsSample.Shell.ViewModels
 {
@@ -13,7 +15,7 @@ namespace PrismMahAppsSample.Shell.ViewModels
         /// </summary>
         public MainWindowViewModel()
         {
-            // Register for events
+            // Register to events
             EventAggregator.GetEvent<StatusBarMessageUpdateEvent>().Subscribe(OnStatusBarMessageUpdateEvent);
         }
 

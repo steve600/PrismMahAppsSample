@@ -19,7 +19,8 @@ namespace PrismMahAppsSample.Shell
         /// <returns></returns>
         protected override DependencyObject CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            Container.RegisterInstance(typeof(Window), WindowNames.MainWindowName, Container.Resolve<MainWindow>(), new ContainerControlledLifetimeManager());
+            return Container.Resolve<Window>(WindowNames.MainWindowName);
         }
 
         /// <summary>
@@ -40,6 +41,9 @@ namespace PrismMahAppsSample.Shell
                 // Add tiles to MainRegion
                 regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
             }
+
+            // Register services
+            this.RegisterServices();
 
             Application.Current.MainWindow.Show();
         }
@@ -62,6 +66,14 @@ namespace PrismMahAppsSample.Shell
             moduleCatalog.AddModule(typeof(ModuleA.ModuleA));
             // Register ModuleB
             moduleCatalog.AddModule(typeof(ModuleB.ModuleB));
+        }
+
+        /// <summary>
+        /// Register services
+        /// </summary>
+        private void RegisterServices()
+        {
+            Container.RegisterInstance<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService>(), new ContainerControlledLifetimeManager());
         }
     }
 }

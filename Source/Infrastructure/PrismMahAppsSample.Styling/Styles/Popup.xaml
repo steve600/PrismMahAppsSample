@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="PopupRegionWindowStyle" TargetType="Window">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="ShowInTaskbar" Value="{Binding Path=Content.DataContext.ShowInTaskbar, FallbackValue=False}" />
+        <Setter Property="ResizeMode" Value="{Binding Path=Content.DataContext.PopupResizeMode, FallbackValue=NoResize}" />
+        <Setter Property="SizeToContent" Value="{Binding Path=Content.DataContext.PopupSizeToContent, FallbackValue=WidthAndHeight}" />
+        <Setter Property="Icon" Value="{Binding Path=Content.DataContext.Icon, RelativeSource={RelativeSource Self}}" />
+        <Setter Property="Title" Value="{Binding Path=Content.DataContext.Title, RelativeSource={RelativeSource Self}}" />
+    </Style>
+</ResourceDictionary>

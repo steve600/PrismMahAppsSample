@@ -12,5 +12,7 @@ namespace PrismMahAppsSample.Infrastructure.Constants
         public static string FlyoutRegion = "FlyoutRegion";
         public static string LeftWindowCommandsRegion = "LeftWindowCommandsRegion";
         public static string RightWindowCommandsRegion = "RightWindowCommandsRegion";
+
+        public static string DialogPopupRegion = "DialogPopupRegion";
     }
 }

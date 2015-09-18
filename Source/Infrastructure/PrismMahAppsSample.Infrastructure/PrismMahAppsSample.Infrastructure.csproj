@@ -79,13 +79,23 @@
     <Compile Include="ApplicationCommands.cs" />
     <Compile Include="Base\PrismBaseModule.cs" />
     <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="Base\ViewModelPopupBase.cs" />
+    <Compile Include="Behaviors\DialogActivationBehavior.cs" />
+    <Compile Include="Behaviors\IWindow.cs" />
+    <Compile Include="Behaviors\RegionPopupBehaviors.cs" />
+    <Compile Include="Behaviors\WindowDialogActivationBehavior.cs" />
+    <Compile Include="Behaviors\WindowWrapper.cs" />
     <Compile Include="Constants\FlyoutNames.cs" />
     <Compile Include="Constants\RegionNames.cs" />
+    <Compile Include="Constants\ServiceNames.cs" />
+    <Compile Include="Constants\WindowNames.cs" />
     <Compile Include="Events\StatusBarMessageUpdateEvent.cs" />
     <Compile Include="Interfaces\IFlyoutService.cs" />
     <Compile Include="Interfaces\IFlyoutView.cs" />
+    <Compile Include="Interfaces\IMetroMessageDisplayService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FlyoutService.cs" />
+    <Compile Include="Services\MetroMessageDisplayService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

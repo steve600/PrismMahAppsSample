@@ -3,8 +3,14 @@
 
     <ResourceDictionary.MergedDictionaries>
 
+        <!-- Icons -->
+        <ResourceDictionary Source="/PrismMahAppsSample.Styling;component/BitmapGraphics/Icons.xaml"/>
+        
         <!-- Styles -->
         <ResourceDictionary Source="/PrismMahAppsSample.Styling;component/Styles/Label.xaml"/>
+        
+        <!-- Popup-Windows -->
+        <ResourceDictionary Source="/PrismMahAppsSample.Styling;component/Styles/Popup.xaml"/>
 
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

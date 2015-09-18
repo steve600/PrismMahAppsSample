@@ -82,6 +82,8 @@
   <ItemGroup>
     <Compile Include="ModuleA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\HomeTilesViewModel.cs" />
+    <Compile Include="ViewModels\ModuleAPopupViewModel.cs" />
     <Compile Include="ViewModels\RightTitlebarCommandsViewModel.cs" />
     <Compile Include="Views\C1Flyout.xaml.cs">
       <DependentUpon>C1Flyout.xaml</DependentUpon>
@@ -91,6 +93,9 @@
     </Compile>
     <Compile Include="Views\HomeTiles.xaml.cs">
       <DependentUpon>HomeTiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModuleAPopup.xaml.cs">
+      <DependentUpon>ModuleAPopup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RightTitlebarCommands.xaml.cs">
       <DependentUpon>RightTitlebarCommands.xaml</DependentUpon>
@@ -116,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HomeTiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ModuleAPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
