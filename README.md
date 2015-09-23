@@ -19,3 +19,11 @@ The example application shows the combination of these two libraries with PRISM-
 [MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 3: Erstellung von Modulen)]
 (http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-3-erstellung-von-modulen/)
 
+[MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 4: Event-Aggregator)]
+(http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-4-event-aggregator/)
+
+[MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 5: Logging)]
+(http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-5-logging/)
+
+[MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 6: Lokalisierung)]
+(http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-6-lokalisierung/)
