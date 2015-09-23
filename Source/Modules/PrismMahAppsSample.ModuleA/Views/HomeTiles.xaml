@@ -6,6 +6,10 @@
              xmlns:local="clr-namespace:PrismMahAppsSample.ModuleA.Views"
              xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+                   lex:LocalizeDictionary.DesignCulture="de-DE"        
+                   lex:ResxLocalizationProvider.DefaultAssembly="PrismMahAppsSample.ModuleA"
+                   lex:ResxLocalizationProvider.DefaultDictionary="Resources"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
@@ -18,32 +22,26 @@
         <!-- Header -->
         <Label Grid.Row="0" 
                Style="{StaticResource Header1}"
-               Content="Module A - Tiles" />
+               Content="{lex:Loc ModuleATiles}" />
         
         <!-- Tiles -->
         <StackPanel Grid.Row="1" 
                     Orientation="Horizontal">
-            <metro:Tile Title="Module A - Show Popup" 
-                        Content="Shows a dialog in the Popup-Region"
+            <metro:Tile Title="{lex:Loc Tile1ShowPopupTitle}" 
+                        Content="{lex:Loc Tile1ShowPopupDescription}"
                         Command="{Binding ShowModuleAPopupCommand}"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
                         TiltFactor="1"                    
-                        Width="205" 
+                        Width="255" 
                         Height="100" />
-            <metro:Tile Title="Module A - Show message" 
-                        Content="Shows a Metro-Style message box"
+            <metro:Tile Title="{lex:Loc Tile2ShowPopupTitle}" 
+                        Content="{lex:Loc Tile2ShowPopupDescription}"
                         Command="{Binding ShowModuleAMessageCommand}"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
                         TiltFactor="1"                    
-                        Width="205" 
-                        Height="100" />
-            <metro:Tile Title="Module A - Tile 3" 
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        TiltFactor="1"                    
-                        Width="100" 
+                        Width="255" 
                         Height="100" />
         </StackPanel>
 

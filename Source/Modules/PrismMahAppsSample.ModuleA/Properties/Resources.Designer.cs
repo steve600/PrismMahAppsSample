@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PrismMahAppsSample.Shell.Properties {
+namespace PrismMahAppsSample.ModuleA.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PrismMahAppsSample.Shell.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrismMahAppsSample.Shell.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrismMahAppsSample.ModuleA.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,47 @@ namespace PrismMahAppsSample.Shell.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellColor ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @ModuleATiles ähnelt.
         /// </summary>
-        internal static string ShellColor {
+        internal static string ModuleATiles {
             get {
-                return ResourceManager.GetString("ShellColor", resourceCulture);
+                return ResourceManager.GetString("ModuleATiles", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellLanguage ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @Tile1ShowPopupDescription ähnelt.
         /// </summary>
-        internal static string ShellLanguage {
+        internal static string Tile1ShowPopupDescription {
             get {
-                return ResourceManager.GetString("ShellLanguage", resourceCulture);
+                return ResourceManager.GetString("Tile1ShowPopupDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellSettings ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @Tile1ShowPopupTitle ähnelt.
         /// </summary>
-        internal static string ShellSettings {
+        internal static string Tile1ShowPopupTitle {
             get {
-                return ResourceManager.GetString("ShellSettings", resourceCulture);
+                return ResourceManager.GetString("Tile1ShowPopupTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellStatusBarMessage ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @Tile2ShowPopupDescription ähnelt.
         /// </summary>
-        internal static string ShellStatusBarMessage {
+        internal static string Tile2ShowPopupDescription {
             get {
-                return ResourceManager.GetString("ShellStatusBarMessage", resourceCulture);
+                return ResourceManager.GetString("Tile2ShowPopupDescription", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellTheme ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @Tile2ShowPopupTitle ähnelt.
         /// </summary>
-        internal static string ShellTheme {
+        internal static string Tile2ShowPopupTitle {
             get {
-                return ResourceManager.GetString("ShellTheme", resourceCulture);
+                return ResourceManager.GetString("Tile2ShowPopupTitle", resourceCulture);
             }
         }
     }

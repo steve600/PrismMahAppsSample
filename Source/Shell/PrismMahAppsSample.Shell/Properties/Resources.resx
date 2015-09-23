@@ -114,4 +114,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ShellSettings" xml:space="preserve">
+    <value>@ShellSettings</value>
+  </data>
+  <data name="ShellLanguage" xml:space="preserve">
+    <value>@ShellLanguage</value>
+  </data>
+  <data name="ShellTheme" xml:space="preserve">
+    <value>@ShellTheme</value>
+  </data>
+  <data name="ShellColor" xml:space="preserve">
+    <value>@ShellColor</value>
+  </data>
+  <data name="ShellStatusBarMessage" xml:space="preserve">
+    <value>@ShellStatusBarMessage</value>
+  </data>
 </root>

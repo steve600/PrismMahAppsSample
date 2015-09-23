@@ -78,10 +78,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="WPFLocalizeExtension, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\WpfLocalizeExtension.2.3.2\lib\net35\WPFLocalizeExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.2.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\XAMLMarkupExtensions.1.2.1.3\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModuleB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\LeftTitlebarCommandsViewModel.cs" />
     <Compile Include="Views\C1Flyout.xaml.cs">
       <DependentUpon>C1Flyout.xaml</DependentUpon>
@@ -116,6 +129,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-US.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

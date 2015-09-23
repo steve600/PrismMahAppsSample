@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PrismMahAppsSample.Shell.Properties {
+namespace PrismMahAppsSample.ModuleB.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PrismMahAppsSample.Shell.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrismMahAppsSample.Shell.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrismMahAppsSample.ModuleB.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,11 @@ namespace PrismMahAppsSample.Shell.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellColor ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die @ModuleBTiles ähnelt.
         /// </summary>
-        internal static string ShellColor {
+        internal static string ModuleBTiles {
             get {
-                return ResourceManager.GetString("ShellColor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellLanguage ähnelt.
-        /// </summary>
-        internal static string ShellLanguage {
-            get {
-                return ResourceManager.GetString("ShellLanguage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellSettings ähnelt.
-        /// </summary>
-        internal static string ShellSettings {
-            get {
-                return ResourceManager.GetString("ShellSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellStatusBarMessage ähnelt.
-        /// </summary>
-        internal static string ShellStatusBarMessage {
-            get {
-                return ResourceManager.GetString("ShellStatusBarMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die @ShellTheme ähnelt.
-        /// </summary>
-        internal static string ShellTheme {
-            get {
-                return ResourceManager.GetString("ShellTheme", resourceCulture);
+                return ResourceManager.GetString("ModuleBTiles", resourceCulture);
             }
         }
     }

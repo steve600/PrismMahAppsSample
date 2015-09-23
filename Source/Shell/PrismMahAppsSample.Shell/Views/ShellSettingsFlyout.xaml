@@ -6,11 +6,15 @@
               xmlns:local="clr-namespace:PrismMahAppsSample.Shell.Views"
               xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
               xmlns:prism="http://www.codeplex.com/prism"
+              xmlns:lex="http://wpflocalizeextension.codeplex.com"
+              lex:LocalizeDictionary.DesignCulture="de-DE"        
+              lex:ResxLocalizationProvider.DefaultAssembly="PrismMahAppsSample.Shell"
+              lex:ResxLocalizationProvider.DefaultDictionary="Resources"
               prism:ViewModelLocator.AutoWireViewModel="True"
               mc:Ignorable="d" 
               Theme="Accent"
               Position="Right"
-              Header="Settings"
+              Header="{lex:Loc ShellSettings}"
               Width="250"
               d:DesignHeight="300" d:DesignWidth="300">
     <Grid Margin="5">
@@ -32,7 +36,7 @@
         <TextBlock Grid.Column="0"
                    Grid.Row="0"
                    VerticalAlignment="Center"
-                   Text="Theme" />
+                   Text="{lex:Loc ShellTheme}" />
         <ComboBox Grid.Column="2"
                   Grid.Row="0"
                   ItemsSource="{Binding Path=ApplicationThemes, UpdateSourceTrigger=PropertyChanged}"
@@ -43,12 +47,23 @@
         <TextBlock Grid.Column="0"
                    Grid.Row="2"
                    VerticalAlignment="Center"
-                   Text="Color" />
+                   Text="{lex:Loc ShellColor}" />
         <ComboBox Grid.Column="2"
                   Grid.Row="2" 
                   ItemsSource="{Binding Path=AccentColors, UpdateSourceTrigger=PropertyChanged}"
                   DisplayMemberPath="Name" 
                   SelectedItem="{Binding Path=SelectedAccentColor, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+        <!-- Language -->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="4"
+                   VerticalAlignment="Center"
+                   Text="{lex:Loc ShellLanguage}" />
+        <ComboBox Grid.Column="2"
+                  Grid.Row="4"
+                  ItemsSource="{Binding Path=SupportedLanguages, UpdateSourceTrigger=PropertyChanged}"
+                  DisplayMemberPath="DisplayName" 
+                  SelectedItem="{Binding Path=SelectedLanguage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
 
     </Grid>
 </metro:Flyout>

@@ -8,6 +8,7 @@ using PrismMahAppsSample.Shell.Views;
 using PrismMahAppsSample.Infrastructure.Services;
 using PrismMahAppsSample.Infrastructure;
 using PrismMahAppsSample.Infrastructure.Interfaces;
+using Prism.Logging;
 
 namespace PrismMahAppsSample.Shell
 {
@@ -48,12 +49,23 @@ namespace PrismMahAppsSample.Shell
             Application.Current.MainWindow.Show();
         }
 
+        /// <summary>
+        /// Configure the container
+        /// </summary>
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
 
+            // Application commands
             Container.RegisterType<IApplicationCommands, ApplicationCommandsProxy>();
+            // Flyout service
             Container.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
+            // Localizer service
+            // Localizer-Service
+            Container.RegisterInstance(typeof(ILocalizerService),
+                ServiceNames.LocalizerService,
+                new LocalizerService("de-DE"),
+                new Microsoft.Practices.Unity.ContainerControlledLifetimeManager());
         }
 
         /// <summary>
@@ -73,7 +85,18 @@ namespace PrismMahAppsSample.Shell
         /// </summary>
         private void RegisterServices()
         {
+            // MessageDisplayService
             Container.RegisterInstance<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService, Container.Resolve<MetroMessageDisplayService>(), new ContainerControlledLifetimeManager());
+        }
+
+        /// <summary>
+        /// Create logger
+        /// </summary>
+        /// <returns></returns>
+        protected override ILoggerFacade CreateLogger()
+        {
+            //return base.CreateLogger();
+            return new Logging.NLogLogger();
         }
     }
 }

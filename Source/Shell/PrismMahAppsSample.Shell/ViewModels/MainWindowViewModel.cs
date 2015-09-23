@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Events;
+using Prism.Logging;
 using Prism.Regions;
 using PrismMahAppsSample.Infrastructure.Base;
 using PrismMahAppsSample.Infrastructure.Constants;
@@ -17,6 +18,8 @@ namespace PrismMahAppsSample.Shell.ViewModels
         {
             // Register to events
             EventAggregator.GetEvent<StatusBarMessageUpdateEvent>().Subscribe(OnStatusBarMessageUpdateEvent);
+
+            UnityContainer.Resolve<ILoggerFacade>().Log("MainViewModel created", Category.Info, Priority.None);
         }
 
         #region Event-Handler

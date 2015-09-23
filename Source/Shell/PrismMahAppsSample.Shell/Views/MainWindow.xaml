@@ -10,6 +10,10 @@
                    infBehaviors:RegionPopupBehaviors.ContainerWindowStyle="{StaticResource PopupRegionWindowStyle}"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
                    xmlns:prism="http://www.codeplex.com/prism"
+                   xmlns:lex="http://wpflocalizeextension.codeplex.com"
+                   lex:LocalizeDictionary.DesignCulture="de-DE"        
+                   lex:ResxLocalizationProvider.DefaultAssembly="PrismMahAppsSample.Shell"
+                   lex:ResxLocalizationProvider.DefaultDictionary="Resources"
                    prism:ViewModelLocator.AutoWireViewModel="True"
                    ResizeMode="CanResizeWithGrip"
                    GlowBrush="{DynamicResource AccentColorBrush}"
@@ -74,7 +78,7 @@
             <StatusBar Grid.Row="2">
                 <StatusBarItem>PrismMahAppsSample DEMO Application</StatusBarItem>
                 <Separator Style="{StaticResource MetroStatusBarSeparator}" />
-                <StatusBarItem>Message:</StatusBarItem>
+                <StatusBarItem Content="{lex:Loc ShellStatusBarMessage}" />
                 <StatusBarItem Content="{Binding Path=StatusBarMessage, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" />
             </StatusBar>
 

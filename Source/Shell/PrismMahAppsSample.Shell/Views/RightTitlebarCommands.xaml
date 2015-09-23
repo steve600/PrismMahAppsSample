@@ -8,6 +8,10 @@
             xmlns:local="clr-namespace:PrismMahAppsSample.Shell.Views"
             xmlns:constants="clr-namespace:PrismMahAppsSample.Infrastructure.Constants;assembly=PrismMahAppsSample.Infrastructure" 
             xmlns:inf="clr-namespace:PrismMahAppsSample.Infrastructure;assembly=PrismMahAppsSample.Infrastructure"
+            xmlns:lex="http://wpflocalizeextension.codeplex.com"
+            lex:LocalizeDictionary.DesignCulture="de-DE"        
+            lex:ResxLocalizationProvider.DefaultAssembly="PrismMahAppsSample.Shell"
+            lex:ResxLocalizationProvider.DefaultDictionary="Resources"
             mc:Ignorable="d"
             VerticalAlignment="Center"
             d:DesignHeight="30" d:DesignWidth="300">
@@ -24,7 +28,7 @@
             </Rectangle>
             <TextBlock Margin="4 0 0 0"
                        VerticalAlignment="Center"
-                       Text="Settings" />
+                       Text="{lex:Loc ShellSettings}" />
         </StackPanel>
     </Button>
 </StackPanel>

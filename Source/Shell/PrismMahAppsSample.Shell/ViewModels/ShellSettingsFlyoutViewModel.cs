@@ -1,10 +1,13 @@
 ﻿using MahApps.Metro;
 using Microsoft.Practices.Unity;
 using PrismMahAppsSample.Infrastructure.Base;
+using PrismMahAppsSample.Infrastructure.Constants;
 using PrismMahAppsSample.Infrastructure.Events;
+using PrismMahAppsSample.Infrastructure.Interfaces;
 using PrismMahAppsSample.Shell.Model;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +18,17 @@ namespace PrismMahAppsSample.Shell.ViewModels
 {
     public class ShellSettingsFlyoutViewModel : ViewModelBase
     {
-        #region CTOR
+        private ILocalizerService localizerService = null;
 
+        #region CTOR
+        
         /// <summary>
         /// CTOR
         /// </summary>
         public ShellSettingsFlyoutViewModel()
         {
+            this.localizerService = UnityContainer.Resolve<ILocalizerService>(ServiceNames.LocalizerService);
+
             // create metro theme color menu items for the demo
             this.ApplicationThemes = ThemeManager.AppThemes
                                            .Select(a => new ApplicationTheme() { Name = a.Name, BorderColorBrush = a.Resources["BlackColorBrush"] as Brush, ColorBrush = a.Resources["WhiteColorBrush"] as Brush })
@@ -101,6 +108,40 @@ namespace PrismMahAppsSample.Shell.ViewModels
 
                     EventAggregator.GetEvent<StatusBarMessageUpdateEvent>().Publish(String.Format("Accent color changed to {0}", value.Name));
                 }
+            }
+        }
+
+
+        /// <summary>
+        /// Supported languages
+        /// </summary>
+        public IList<CultureInfo> SupportedLanguages
+        {
+            get
+            {
+                if (localizerService != null)
+                {
+                    return localizerService.SupportedLanguages;
+                }
+
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// The selected language
+        /// </summary>
+        public CultureInfo SelectedLanguage
+        {
+            get { return (localizerService != null) ? localizerService.SelectedLanguage : null; }
+            set
+            {
+                if (value != null && value != this.localizerService.SelectedLanguage)
+                {
+                    if (localizerService != null)
+                        this.localizerService.SelectedLanguage = value;
+                }
+
             }
         }
 
