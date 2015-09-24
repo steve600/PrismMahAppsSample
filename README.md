@@ -10,6 +10,20 @@ The example application shows the combination of these two libraries with PRISM-
 
 ![Main dialog](http://csharp-blog.de/wp-content/uploads/2015/09/PrismMahAppsSample_MainDialog.png)
 
+In my blog I've already written a couple of posts about the sample program (unfortunately all in German). Now I got some requests to translate these posts into english and for that I will use the WIKI. Altogether there are currently the following articles:
+
+[Part 1: Create solution (IN PROGRESS)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-1:-Create-Solution)
+
+[Part 2: Regions and RegionAdapter (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-2:-Regions-and-RegionAdaptern)
+
+[Part 3: Prism-Modules (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-3:-Prism-Modules)
+
+[Part 4: Event-Aggregator (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-4:-Event-Aggregator)
+
+[Part 5: Logging (ILoggerFacade) (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-5:-Logging-(ILoggerFacade))
+
+[Part 6: Localization (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-6:-Localization)
+
 ### Additional information (in german)
 
 [MahApps.Metro in Verbindung mit der PRISM-Bibliothek (Teil 1: Erstellung der Solution)] (http://csharp-blog.de/2015/09/mahapps-metro-in-verbindung-mit-der-prism-bibliothek-teil-1-erstellung-der-solution/)
