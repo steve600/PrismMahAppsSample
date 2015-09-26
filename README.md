@@ -12,7 +12,7 @@ The example application shows the combination of these two libraries with PRISM-
 
 In my blog I've already written a couple of posts about the sample program (unfortunately all in German). Now I got some requests to translate these posts into english and for that I will use the WIKI. Currently there are the following articles:
 
-[Part 1: Create solution (IN PROGRESS)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-1:-Create-Solution)
+[Part 1: Create solution] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-1:-Create-Solution)
 
 [Part 2: Regions and RegionAdapter (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-2:-Regions-and-RegionAdaptern)
 
