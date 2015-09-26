@@ -14,7 +14,7 @@ In my blog I've already written a couple of posts about the sample program (unfo
 
 [Part 1: Create solution] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-1:-Create-Solution)
 
-[Part 2: Regions and RegionManager (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-2:-Regions-and-RegionManager)
+[Part 2: Regions and RegionManager] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-2:-Regions-and-RegionManager)
 
 [Part 3: Prism-Modules (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-3:-Prism-Modules)
 
