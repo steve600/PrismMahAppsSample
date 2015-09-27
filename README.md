@@ -16,7 +16,7 @@ In my blog I've already written a couple of posts about the sample program (unfo
 
 [Part 2: Regions and RegionManager] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-2:-Regions-and-RegionManager)
 
-[Part 3: Prism-Modules (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-3:-Prism-Modules)
+[Part 3: Prism-Modules] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-3:-Prism-Modules)
 
 [Part 4: Event-Aggregator (TODO)] (https://github.com/steve600/PrismMahAppsSample/wiki/Part-4:-Event-Aggregator)
 
