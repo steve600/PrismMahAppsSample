@@ -9,7 +9,7 @@ namespace PrismMahAppsSample.Infrastructure.Base
     {
         public ViewModelBase()
         {
-            this.UnityContainer = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IUnityContainer>();
+            this.Container = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IUnityContainer>();
             this.RegionManager = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IRegionManager>();
             this.EventAggregator = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IEventAggregator>();
         }
@@ -21,7 +21,7 @@ namespace PrismMahAppsSample.Infrastructure.Base
         /// <summary>
         /// The unity container
         /// </summary>
-        public IUnityContainer UnityContainer
+        public IUnityContainer Container
         {
             get { return unityContainer; }
             private set { this.SetProperty<IUnityContainer>(ref this.unityContainer, value); }

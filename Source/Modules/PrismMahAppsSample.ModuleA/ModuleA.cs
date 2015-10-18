@@ -25,6 +25,9 @@ namespace PrismMahAppsSample.ModuleA
 
             // Tiles
             regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
+
+            // Register Views
+            Prism.Unity.UnityExtensions.RegisterTypeForNavigation<Views.ModuleAPopup>(unityContainer, PopupNames.ModuleAPopup);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace PrismMahAppsSample.Shell.ViewModels
         /// </summary>
         public ShellSettingsFlyoutViewModel()
         {
-            this.localizerService = UnityContainer.Resolve<ILocalizerService>(ServiceNames.LocalizerService);
+            this.localizerService = Container.Resolve<ILocalizerService>(ServiceNames.LocalizerService);
 
             // create metro theme color menu items for the demo
             this.ApplicationThemes = ThemeManager.AppThemes

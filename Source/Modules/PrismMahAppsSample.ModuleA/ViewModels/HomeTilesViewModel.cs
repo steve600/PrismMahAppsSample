@@ -43,9 +43,7 @@ namespace PrismMahAppsSample.ModuleA.ViewModels
 
         public void ShowModuleAPopup()
         {
-            var view = this.UnityContainer.Resolve<Views.ModuleAPopup>();
-            this.RegionManager.AddToRegion(RegionNames.DialogPopupRegion, view);
-            this.RegionManager.Regions[RegionNames.DialogPopupRegion].Activate(view);
+            this.RegionManager.RequestNavigate(RegionNames.DialogPopupRegion, PopupNames.ModuleAPopup);
         }
 
         /// <summary>
@@ -63,7 +61,7 @@ namespace PrismMahAppsSample.ModuleA.ViewModels
         /// </summary>
         public void ShowModuleAMessage()
         {
-            this.UnityContainer.Resolve<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService).ShowMessageAsnyc("Module A Message", "This is a message from Module A");
+            this.Container.Resolve<IMetroMessageDisplayService>(ServiceNames.MetroMessageDisplayService).ShowMessageAsnyc("Module A Message", "This is a message from Module A");
         }
 
         #endregion Commands

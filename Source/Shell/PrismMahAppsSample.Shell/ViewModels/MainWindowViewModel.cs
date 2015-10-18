@@ -19,7 +19,7 @@ namespace PrismMahAppsSample.Shell.ViewModels
             // Register to events
             EventAggregator.GetEvent<StatusBarMessageUpdateEvent>().Subscribe(OnStatusBarMessageUpdateEvent);
 
-            UnityContainer.Resolve<ILoggerFacade>().Log("MainViewModel created", Category.Info, Priority.None);
+            Container.Resolve<ILoggerFacade>().Log("MainViewModel created", Category.Info, Priority.None);
         }
 
         #region Event-Handler
